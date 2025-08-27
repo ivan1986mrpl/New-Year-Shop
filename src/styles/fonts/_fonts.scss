@@ -20,6 +20,7 @@ $fontSecondary: 'Allura';
   400,
   normal
 );
+
 // @include font-woff2($fontPrimary, '../assets/fonts/#{$fontPrimary}-Medium', 500, normal);
 @include font-woff2(
   $fontPrimary,
@@ -41,6 +42,7 @@ $fontSecondary: 'Allura';
   400,
   normal
 );
+
 // @include font-woff2($fontSecondary, "../assets/fonts/#{$fontSecondary}-Medium", 500, normal);
 // @include font-woff2($fontSecondary, "../assets/fonts/#{$fontSecondary}-SemiBold", 600, normal);
 // @include font-woff2($fontSecondary, "../assets/fonts/#{$fontSecondary}-Bold", 700, normal);

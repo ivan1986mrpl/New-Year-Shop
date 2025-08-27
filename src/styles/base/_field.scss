@@ -1,5 +1,6 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
+
 // @use '../variables';
 
 .field {
@@ -10,10 +11,11 @@
   position: relative;
 
   &:has(.field__input:not(:placeholder-shown)) .field__label {
+    color: #000000;
+
     // обращаемся к label только когда плейсхолдер не должен отображаться
     scale: 0.7;
     translate: -1.75em -2.75em; // надо подбирать
-    color: #000000;
   }
 
   &__label {

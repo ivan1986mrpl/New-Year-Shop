@@ -1,5 +1,6 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
+
 // @use '../variables';
 
 $iconMenuColor: #000000; // burger button
@@ -62,6 +63,7 @@ $iconMenuColor: #000000; // burger button
 } */
 
 // Burger second version
+
 /* .icon-menu {
   display: none;
 
@@ -124,40 +126,48 @@ $iconMenuColor: #000000; // burger button
 
 .icon-menu {
 	display: none;
+
 	@media (max-width: em(767.98)) {
-		display: block;
-		position: relative;
-		width: rem(20);
 		flex: 0 0 rem(30);
-		height: rem(18);
+		position: relative;
 		z-index: 5;
+		display: block;
+		width: rem(20);
+		height: rem(18);
+
 		@media (any-hover: none) {
 			cursor: default;
 		}
+
     span {
       width: 0;
     }
+
 		&::before,
 		&::after {
 			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
 			position: absolute;
+			right: 0;
 			width: 100%;
 			height: rem(1);
 			background-color: $iconMenuColor;
+			transition: all 0.3s ease 0s;
 		}
+
 		&::before {
 			top: 3px;
 		}
+
 		&::after {
 			bottom: 3px;
 		}
+
 		span {
 			top: calc(50% - rem(1));
 		}
 	}
 }
+
 .icon-menu.menu-open {
 	@media (max-width:em(767.98)){
 		span,
@@ -165,13 +175,16 @@ $iconMenuColor: #000000; // burger button
 		&::after {
 			background-color: $iconMenuColor;
 		}
+
 		span {
 			width: 0;
 		}
+
 		&::before {
 			top: calc(50% - rem(1));
 			transform: rotate(-45deg);
 		}
+
 		&::after {
 			bottom: calc(50% - rem(1));
 			transform: rotate(45deg);

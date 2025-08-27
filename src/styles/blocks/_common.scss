@@ -1,2 +1,13 @@
-@use "../helpers/function" as *;
+@use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
+
+.text {
+  &--accent {
+    font-family: var(--second-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+  }
+}

@@ -5,6 +5,7 @@
   --font-family-base: 'Montserrat', sans-serif;
   --font-family: 'Montserrat', sans-serif;
   --second-family: 'Allura', sans-serif;
+
   // --third-family: 'SF Pro', sans-serif;
   --font-size: #{rem(16)};
   --font-size-mobile: #{rem(16)};
@@ -29,13 +30,13 @@
   --color-bg-hover: #{rgba(255, 70, 70, 0.1)};
 
   --border-radius: 12px;
+  --transition: 0.3s ease 0s;
   
   
   
   
   // --color-black: #{rgba(#000000, 10%)};
 
-  // --transition: 0.3s ease 0s;
   // --border: #{rem(1)} solid var(--color-dark);
   // --border-radius: #{rem(10)};
 

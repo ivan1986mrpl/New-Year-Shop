@@ -1,11 +1,13 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
+
 // @use '../variables';
 
 .social {
   --social-border: #666666;
   --social-color: #bca2a2;
   --social-hover-color: rgb(117, 117, 64);
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +19,7 @@
     position: relative;
     width: 48px;
     height: 48px;
+
     // начальный цвет иконки и текста внутри (currentColor)
     color: var(--social-color);
     border: 1px solid var(--social-border);

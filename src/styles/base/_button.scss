@@ -1,25 +1,29 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
-// @use '../variables';
+
 .button {
-  padding-block: rem(16);
-  padding-inline: rem(40);
-  font-size: rem(20);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 32px;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
   text-align: center;
+  text-transform: uppercase;
   color: var(--color-white);
   background-color: var(--color-dark);
-  border-radius: rem(8);
-  transition: all 0.3s;
+  border-radius: 20px;
+  transition: var(--transition);
 
   &:active {
     scale: 1.05;
   }
 
-  @media (any-hover: hover) {
-    &:hover {
-    }
+  @include hover {
+    background-color: var(--color-white);
+    color: var(--color-dark);
   }
 }

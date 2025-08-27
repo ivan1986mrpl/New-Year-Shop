@@ -1,5 +1,6 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
+
 // @use '../variables';
 
 $menuColor: #000000; // text
@@ -53,10 +54,9 @@ $iconMenuColor: #000000; // burger button
     @media (max-width: em(767.98)) {
       // burger
       flex-direction: column;
-      column-gap: rem(8);
-
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      column-gap: rem(8);
     }
   }
 

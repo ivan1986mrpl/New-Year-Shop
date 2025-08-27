@@ -4,6 +4,7 @@
 .checkbox {
   --checkbox-color-1: #999999;
   --checkbox-color-2: #000000;
+
   // flex-shrink: 0;
   appearance: none;
   position: relative;
@@ -30,11 +31,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    translate: -50% -50%;
     width: 16px;
     height: 16px;
     background: url('../assets/img/root/icon-check_white.svg') center/contain
       no-repeat;
+    translate: -50% -50%;
   }
 }
 

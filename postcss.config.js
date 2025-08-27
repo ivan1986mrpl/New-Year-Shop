@@ -5,7 +5,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
   plugins: [
-    pxtorem({
+    isProduction && pxtorem({
       // Используем pxtorem как функцию с конфигурацией
       rootValue: 16,
       propList: ['*'], // Преобразовывать все свойства
