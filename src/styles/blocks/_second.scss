@@ -4,12 +4,18 @@
 .about {
   background-color: var(--color-orange);
 
-  &__container {
+  &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1rem;
     border-radius: 20px;
+    background-color: var(--color-white);
+
+    @media (max-width: em(750)) {
+      grid-template-columns: auto;
+      gap: 60px;
+    }
   }
 
   &__content {
@@ -18,7 +24,12 @@
     row-gap: 20px;
     max-width: 426px;
     margin-left: 4%;
-    background-color: var(--color-white);
+    @media (max-width: em(750)) {
+      margin-left: 0;
+      text-align: center;
+      max-width: 100%;
+      padding: 60px 20px 0 20px;
+    }
   }
 
   &__title {
@@ -40,5 +51,11 @@
   &__image {
     overflow: hidden;
     border-radius: 20px;
+
+    img {
+      @media (max-width: em(750)) {
+        width: 100%;
+      }
+    }
   }
 }

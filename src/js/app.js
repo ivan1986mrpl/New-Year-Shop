@@ -8,7 +8,7 @@
 //  import sliderComparisonImages from "./modules/sliderComparisonImages";
 
 //  import headerFon from "./modules/headerFon";
-//  import pageNavigation from "./modules/page-navigation";
+import pageNavigation from './modules/page-navigation';
 import menuBurger from './modules/menu-burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // popup();
   // spollers();
   // headerFon();
-  // pageNavigation();
+  pageNavigation();
   menuBurger();
   // sliderComparisonImages();
 });

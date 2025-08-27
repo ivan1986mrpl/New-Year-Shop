@@ -24,9 +24,9 @@
           <nav class="menu__body">
             <ul class="menu__list">
               <li class="menu__item"><a href="#" data-goto="." class="menu__link">gifts</a></li>
-              <li class="menu__item"><a href="#" data-goto="." class="menu__link">about</a></li>
-              <li class="menu__item"><a href="#" data-goto="." class="menu__link">best</a></li>
-              <li class="menu__item"><a href="#" data-goto="." class="menu__link">contacts</a></li>
+              <li class="menu__item"><a href="#" data-goto=".about" class="menu__link">about</a></li>
+              <li class="menu__item"><a href="#" data-goto=".best" class="menu__link">best</a></li>
+              <li class="menu__item"><a href="#" data-goto=".footer__top" class="menu__link">contacts</a></li>
             </ul>
           </nav>
         </div>
@@ -57,19 +57,79 @@
 
       <section class="page__about about">
         <div class="about__container">
-          <div class="about__content">
-            <div class="about__subtitle text__accent text__accent--orange">About</div>
-            <h2 class="about__title">Unleash your inner superhero!</h2>
-            <div class="about__text">
-              <p>This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique
-                gifts that will help you improve your life.</p>
+          <div class="about__inner">
+            <div class="about__content">
+              <div class="about__subtitle text__accent text__accent--orange">About</div>
+              <h2 class="about__title">Unleash your inner superhero!</h2>
+              <div class="about__text">
+                <p>This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique
+                  gifts that will help you improve your life.</p>
+              </div>
             </div>
-          </div>
-          <div class="about__image">
-            <img src="assets/img/second/santa.webp" alt="Image" width="638" height="528" loading="lazy">
+            <div class="about__image">
+              <img src="assets/img/second/santa.webp" alt="Image" width="638" height="528" loading="lazy">
+            </div>
           </div>
         </div>
       </section>
+
+      <section id="best" class="page__best best">
+        <div class="best__container">
+          <div class="best__subtitle text__accent">Best Gifts</div>
+          <h2 class="best__title">especially for you</h2>
+          <ul class="best__list">
+            <li class="best__item">
+              <article class="best__card card">
+                <div class="card__image">
+                  <img src="assets/img/third-best/1.png" width="310" height="230" alt="gift" loading="lazy"
+                    class="card__img">
+                </div>
+                <div class="card__inner">
+                  <div class="card__subtitle purple">For work</div>
+                  <h3 class="card__title">Console.log Guru</h3>
+                </div>
+              </article>
+            </li>
+            <li class="best__item">
+              <article class="best__card card">
+                <div class="card__image">
+                  <img src="assets/img/third-best/2.png" width="310" height="230" alt="gift" loading="lazy"
+                    class="card__img">
+                </div>
+                <div class="card__inner">
+                  <div class="card__subtitle green">For health</div>
+                  <h3 class="card__title">Hydration Bot</h3>
+                </div>
+              </article>
+            </li>
+            <li class="best__item">
+              <article class="best__card card">
+                <div class="card__image">
+                  <img src="assets/img/third-best/3.png" width="310" height="230" alt="gift" loading="lazy"
+                    class="card__img">
+                </div>
+                <div class="card__inner">
+                  <div class="card__subtitle purple">For work</div>
+                  <h3 class="card__title">Merge Master</h3>
+                </div>
+              </article>
+            </li>
+            <li class="best__item">
+              <article class="best__card card">
+                <div class="card__image">
+                  <img src="assets/img/third-best/4.png" width="310" height="230" alt="gift" loading="lazy"
+                    class="card__img">
+                </div>
+                <div class="card__inner">
+                  <div class="card__subtitle pink">For harmony</div>
+                  <h3 class="card__title">Spontaneous Coding Philosopher</h3>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </main>
     <footer id="footer" class="footer">
       <div class="footer__container">

@@ -42,6 +42,11 @@
     font-size: 24px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
+    transition: var(--transition);
+
+    @include hover {
+      color: var(--color-orange);
+    }
     @media (max-width: em(370)) {
       font-size: rem(18);
     }
