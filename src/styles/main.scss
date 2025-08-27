@@ -7,12 +7,6 @@
 @use 'utils';
 @use 'globals';
 
-//  use swiper style
-//  @use 'swiper/css';
-//  @use 'swiper/css/effect-cube';
-//  @use 'swiper/css/navigation';
-//  @use 'swiper/css/pagination';
-
 @use 'base/base';
 @use 'blocks/page';
 @use 'blocks/common';
@@ -21,3 +15,4 @@
 @use 'blocks/hero';
 @use 'blocks/second';
 @use 'blocks/best';
+@use 'blocks/clock';

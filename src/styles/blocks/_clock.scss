@@ -1,0 +1,72 @@
+@use '../helpers/function' as *;
+@use '../helpers/mixins' as *;
+
+.clock {
+  background-color: var(--color-orange);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner {
+    max-width: 427px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 1.52;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.countdown {
+  background-color: var(--color-timer);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius-20);
+  padding: 8px 12px 12px;
+
+  > div:not(:first-child) {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 1px;
+      left: 0;
+      top: 50%;
+      translate: 0 -50%;
+      background-color: var(--color-timer);
+    }
+  }
+
+  @media (max-width: em(350)) {
+    padding: rem(3);
+  }
+}
