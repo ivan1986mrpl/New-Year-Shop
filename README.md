@@ -1,14 +1,3 @@
-В сборку добавлены модули:
-
-- scrollUp
-- addDate
-- timer-countdown
-- tabs
-- popup
-- spollers
-- header-burger
-- page-navigation
-
 Требования к именам коммитов
 
 - Названия коммитов должны быть согласно гайдлайну
@@ -42,3 +31,17 @@
 
 - npm run lint
 - npm run lint:fix
+
+- git fetch --all --prune
+
+for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do
+  echo "� Обновление ветки: $branch"
+  git checkout "$branch" || continue
+  # Проверка, существует ли ветка на origin
+  if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+    git branch --set-upstream-to=origin/$branch "$branch"
+    git pull
+  else
+    echo "⚠️  У ветки '$branch' нет соответствующей ветки на origin."
+  fi
+done

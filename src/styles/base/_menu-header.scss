@@ -53,7 +53,10 @@ $iconMenuColor: #000000; // burger button
     @media (max-width: em(767.98)) {
       // burger
       flex-direction: column;
-      column-gap: rem(20);
+      column-gap: rem(8);
+
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -66,7 +69,7 @@ $iconMenuColor: #000000; // burger button
 
     @media (max-width: em(767.98)) {
       // burger
-      font-size: rem(28);
+      font-size: rem(24);
       color: $menuColor; // перепишется в header.scss
     }
   }

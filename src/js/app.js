@@ -9,7 +9,7 @@
 
 //  import headerFon from "./modules/headerFon";
 //  import pageNavigation from "./modules/page-navigation";
-//  import menuBurger from "./modules/menu-burger";
+import menuBurger from './modules/menu-burger';
 
 window.addEventListener('DOMContentLoaded', () => {
   // getting today's date and displaying it on a page in Russian or English (HTML and JavaScript) <div class="date"></div>
@@ -26,6 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // spollers();
   // headerFon();
   // pageNavigation();
-  // menuBurger();
+  menuBurger();
   // sliderComparisonImages();
 });

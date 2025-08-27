@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="description project" />
-  <title>vite-start</title>
+  <meta name="description" content="Cristmas Shop" />
+  <title>Cristmas Shop | Home</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/favicon/site.webmanifest">
   <link rel="stylesheet" href="styles/main.scss" />
   <script type="module" src="js/app.js" defer></script>
 </head>
@@ -13,12 +17,28 @@
 <body>
   <div class="wrapper">
     <header id="header" class="header">
-      <div class="header__container"></div>
+      <div class="header__container">
+        <a href="#" class="header__logo logo" aria-label="home" title="Home">
+          <span class="icon icon__logo">the gifts</span></a>
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#" data-goto="." class="menu__link">gifts</a></li>
+              <li class="menu__item"><a href="#" data-goto="." class="menu__link">about</a></li>
+              <li class="menu__item"><a href="#" data-goto="." class="menu__link">best</a></li>
+              <li class="menu__item"><a href="#" data-goto="." class="menu__link">contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__actions">
+          <button type="button" class="icon-menu" aria-label="Open menu"
+            title="Open menu"><span></span></button>
+        </div>
+      </div>
     </header>
     <main class="page">
       <section id="hero" class="page__hero hero">
         <div class="hero__container">
-
         </div>
       </section>
     </main>

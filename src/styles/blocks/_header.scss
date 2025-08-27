@@ -1,7 +1,62 @@
-@use "../helpers/function" as *;
+@use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 // @use './../base/header-fon';
-// @use './../base/burger';
-// @use './../base/menu-header';
+@use './../base/burger';
+@use './../base/menu-header';
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: var(--color-white);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 12px;
 
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+  }
+
+  &__logo {
+    padding: 6px 20px;
+  }
+
+  &__menu {
+  }
+
+  &__actions {
+    @media (min-width:em(767.98)){
+      display: none;
+        
+    }
+  }
+}
+.menu {
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 8px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    padding: 12px 20px;
+  }
+
+  &__icon {
+  }
+}
