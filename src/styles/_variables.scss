@@ -26,6 +26,10 @@
   --color-green: #06a44f;
   --color-light: #ecf3f8;
   --color-bg-body: var(--color-orange);
+  --color-bg-hover: #{rgba(255, 70, 70, 0.1)};
+
+  --border-radius: 12px;
+  
   
   
   
@@ -44,7 +48,7 @@
   // --tag-pink: #ff43f7;
   // --tag-green: #06a44f;
 
-  --primary-10: rgba(255, 70, 70, 0.1);
+  // --primary-10: rgba(255, 70, 70, 0.1);
   --static-white-20: rgba(255, 255, 255, 0.2);
   --static-white-40: rgba(255, 255, 255, 0.4);
   --overlay: rgba(24, 28, 41, 0.8);

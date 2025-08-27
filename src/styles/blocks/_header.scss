@@ -29,20 +29,13 @@
     padding: 6px 20px;
   }
 
-  &__menu {
-  }
-
   &__actions {
-    @media (min-width:em(767.98)){
+    @media (min-width: em(767.98)) {
       display: none;
-        
     }
   }
 }
 .menu {
-  &__body {
-  }
-
   &__list {
     display: flex;
     align-items: center;
@@ -50,13 +43,14 @@
     column-gap: 8px;
   }
 
-  &__item {
-  }
-
   &__link {
     padding: 12px 20px;
-  }
+    transition: var(--transition);
 
-  &__icon {
+    @include hover {
+      background-color: var(--color-bg-hover);
+      border-radius: var(--border-radius);
+      color: var(--color-orange);
+    }
   }
 }

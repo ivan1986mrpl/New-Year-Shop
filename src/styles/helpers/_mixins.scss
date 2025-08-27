@@ -211,3 +211,20 @@
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+  // ховер будет срабатывать на устройствах без тачскрин, а на устройствах с тачскрин будет кратковременный эффект active
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}
