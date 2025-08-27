@@ -92,7 +92,8 @@ ol {
 }
 
 img {
-  vertical-align: top;
+  display: block;
+  vertical-align: top;  
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -112,14 +113,12 @@ sup {
   color: inherit;
 }
 
-:focus,
-:active {
-  // outline: none;
+[stroke] {
+  stroke: currentColor;
 }
 
-a:focus,
-a:active {
-  // outline: none;
+svg * {
+  transition-property: fill, stroke;
 }
 
 // padding-inline-start: padding-left;

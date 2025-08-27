@@ -6,11 +6,13 @@
 @use './../base/menu-header';
 
 .header {
-  position: fixed;
+  // position: fixed;
+  position: relative;
   z-index: 50;
-  top: 0;
-  left: 0;
-  width: 100%;
+
+  // top: 0;
+  // left: 0;
+  // width: 100%;
   background-color: var(--color-white);
 
   &__container {

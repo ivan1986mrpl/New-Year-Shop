@@ -2,12 +2,20 @@
 @use '../helpers/mixins' as *;
 
 .text {
-  &--accent {
+  &__accent {
     font-family: var(--second-family);
     font-size: 24px;
     font-weight: 400;
     line-height: 1;
     letter-spacing: 0.05em;
     color: var(--color-white);
+
+    &--orange {
+      color: var(--color-orange);
+    }
+
+    &--dark {
+      color: var(--color-dark);
+    }
   }
 }

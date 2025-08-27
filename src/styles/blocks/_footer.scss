@@ -1,2 +1,82 @@
-@use "../helpers/function" as *;
+@use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
+
+.footer {
+  color: var(--color-dark);
+
+  &__top {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 12px;
+
+    @media (max-width: em(1000)) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    border-radius: 20px;
+    padding: 20px 5px;
+    background-color: var(--color-light);
+  }
+
+  &__link--img {
+    --size: 80px;
+
+    @include square(var(--size));
+  }
+
+  &__link--title {
+    font-size: 24px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    @media (max-width: em(370)) {
+      font-size: rem(18);
+    }
+  }
+
+  &__link--text {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  &__copy {
+    font-weight: 400;
+    line-height: 1.48;
+    text-align: center;
+  }
+
+  &__school {
+    transition: var(--transition);
+
+    @include hover {
+      color: var(--color-orange);
+    }
+
+    @media (max-width: em(350)){
+      font-size: 22px;        
+    }
+  }
+}

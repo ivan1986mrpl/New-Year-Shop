@@ -2,24 +2,19 @@
 @use '../helpers/mixins' as *;
 
 .hero {
-  position: relative;
+  min-height: 524px;
+  background-image: url("../../assets/img/hero/hero-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-orange);
+  border-radius: 20px 20px 0 0;
+
   &__container {
-    position: relative;
-    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 185px;
-    padding-bottom: 60px;
-
-    @media (max-width: em(768)) {
-      padding-top: 137px;
-    }
-
-    @media (max-width: em(380)) {
-      padding-top: 185px;
-    }
   }
 
   &__inner {
@@ -36,9 +31,6 @@
     }
   }
 
-  &__subtitle {
-  }
-
   &__title {
     font-family: var(--font-family);
     font-size: 32px;
@@ -48,37 +40,5 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--color-white);
-  }
-
-  &__button {
-  }
-
-  &__text {
-  }
-
-  &__image {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      object-fit: cover;
-      object-position: 0 26px;
-
-      @media (max-width: em(768)) {
-        object-position: 0 65px;
-      }
-
-      @media (max-width: em(380)) {
-        object-position: 6px 65px;
-      }
-    }
   }
 }
