@@ -19,7 +19,7 @@ $iconMenuColor: #000000; // burger button
       // burger
       position: fixed;
       top: 0;
-      left: -100%;
+      right: -100%;
       overflow: auto;
       display: grid;
       grid-template-rows: 1fr auto;
@@ -28,7 +28,7 @@ $iconMenuColor: #000000; // burger button
       height: 100%;
       padding: rem(100) rem(15) rem(30);
       background-color: $menuBackground;
-      transition: left 0.3s;
+      transition: right 0.3s;
 
       &::before {
         // подложка безопасности, чтобы пункты меню не налазили на логотип, а появлялась прокрутка
@@ -36,10 +36,10 @@ $iconMenuColor: #000000; // burger button
         position: fixed;
         z-index: 2;
         top: 0;
-        left: -100%;
+        right: -100%;
         width: 100%;
         background-color: $menuBackground;
-        transition: left 0.3s;
+        transition: right 0.3s;
 
         @include adaptive-clamp(
           'height',
@@ -77,10 +77,10 @@ $iconMenuColor: #000000; // burger button
 
 @media (max-width: em(767.98)) {
   .menu-open.menu__body {
-    left: 0;
+    right: 0;
   }
 
   .menu-open.menu__body::before {
-    left: 0;
+    right: 0;
   }
 }
