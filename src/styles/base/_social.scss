@@ -1,9 +1,8 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 
-
-
 .soc1al {
+  
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -26,10 +25,15 @@
     color: var(--color-dark);
     transition: var(--transition);
 
+    &:active,
+    &:focus {
+      outline: var(--outline-active);
+      border-radius: 4px;
+      background-color: var(--color-focus-active);
+    }
+
     @include hover {
       color: var(--color-orange);
-      border: 1px solid var(--color-orange);
-      border-radius: var(--border-radius);
     }
   }
 }

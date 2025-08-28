@@ -3,6 +3,21 @@
 
 .clock {
   background-color: var(--color-orange);
+  background-image: url('../assets/img/shop/bg-forest.png');
+  background-position: center;
+  // background-size: contain;
+  background-size: 105% 100%;
+  background-repeat: no-repeat;
+  min-height: 668px;
+  @media (max-width: em(970)) {
+    background-size: 125% 100%;
+  }
+  @media (max-width: em(767.98)) {
+    background-size: 180% 130%;
+  }
+  @media (max-width: em(560)) {
+    background-size: 200% 130%;
+  }
   &__container {
     display: flex;
     flex-direction: column;

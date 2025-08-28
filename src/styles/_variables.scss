@@ -30,11 +30,12 @@
   --color-bg-hover: #{rgba(255, 70, 70, 0.1)};
   --color-timer: #{rgba(255, 255, 255, 0.4)};
 
+  --color-focus-active: #{rgba(6, 164, 79, 0.1)};
+  --outline-active: 1px dashed var(--color-green);
+
   --border-radius: 12px;
   --border-radius-20: 20px;
   --transition: 0.3s ease 0s;
-  
-  
   
   
   // --color-black: #{rgba(#000000, 10%)};

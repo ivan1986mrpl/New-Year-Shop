@@ -3,6 +3,11 @@
 
 .best {
   background-color: var(--color-orange);
+  background-image: url('../assets/img/shop/bg-snow.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // min-height: 554px;
   &__container {
     text-align: center;
   }

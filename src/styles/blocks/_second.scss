@@ -3,7 +3,10 @@
 
 .about {
   background-color: var(--color-orange);
-
+  background-image: url("../assets/img/shop/bg-snow.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

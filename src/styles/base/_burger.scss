@@ -1,10 +1,7 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 
-// @use '../variables';
-
 $iconMenuColor: #000000; // burger button
-// Burger
 
 /* 
 .icon-menu {
@@ -125,69 +122,71 @@ $iconMenuColor: #000000; // burger button
 } */
 
 .icon-menu {
-	display: none;
+  display: none;
 
-	@media (max-width: em(767.98)) {
-		flex: 0 0 rem(30);
-		position: relative;
-		z-index: 5;
-		display: block;
-		width: rem(20);
-		height: rem(18);
-
-		@media (any-hover: none) {
-			cursor: default;
-		}
+  @media (max-width: em(767.98)) {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: var(--transition);
+    &:active,
+    &:focus {
+      outline: var(--outline-active);
+      border-radius: 4px;
+      background-color: var(--color-focus-active);
+    }
 
     span {
       width: 0;
     }
 
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 0;
-			width: 100%;
-			height: rem(2);
-			background-color: $iconMenuColor;
-			transition: all 0.3s ease 0s;
-		}
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: 27%;
+      width: 20px;
+      height: rem(2);
+      background-color: $iconMenuColor;
+      transition: all 0.3s ease 0s;
+    }
 
-		&::before {
-			top: 3px;
-		}
+    &::before {
+      top: 10px;
+    }
 
-		&::after {
-			bottom: 3px;
-		}
+    &::after {
+      bottom: 10px;
+    }
 
-		span {
-			top: calc(50% - rem(1));
-		}
-	}
+    span {
+      top: calc(50% - rem(1));
+    }
+  }
 }
 
 .icon-menu.menu-open {
-	@media (max-width:em(767.98)){
-		span,
-		&::before,
-		&::after {
-			background-color: $iconMenuColor;
-		}
+  @media (max-width: em(767.98)) {
+    span,
+    &::before,
+    &::after {
+      background-color: $iconMenuColor;
+    }
 
-		span {
-			width: 0;
-		}
+    span {
+      width: 0;
+    }
 
-		&::before {
-			top: calc(50% - rem(1));
-			transform: rotate(-45deg);
-		}
+    &::before {
+      top: calc(50% - rem(1));
+      transform: rotate(-45deg);
+    }
 
-		&::after {
-			bottom: calc(50% - rem(1));
-			transform: rotate(45deg);
-		}
-	}
+    &::after {
+      bottom: calc(50% - rem(1));
+      transform: rotate(45deg);
+    }
+  }
 }

@@ -30,6 +30,20 @@
     border-radius: 20px;
     padding: 20px 5px;
     background-color: var(--color-light);
+    transition: var(--transition);
+
+    &:focus,
+    &:active {
+      outline: var(--outline-active);
+      background-color: var(--color-focus-active);
+    }
+
+    @include hover {
+      .footer__link--title,
+      .footer__link--text {
+        color: var(--color-orange);
+      }
+    }
   }
 
   &__link--img {
@@ -42,11 +56,7 @@
     font-size: 24px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    transition: var(--transition);
-
-    @include hover {
-      color: var(--color-orange);
-    }
+    
     @media (max-width: em(370)) {
       font-size: rem(18);
     }
@@ -76,12 +86,17 @@
   &__school {
     transition: var(--transition);
 
+    &:focus,
+    &:active {
+      outline: var(--outline-active);
+    }
+
     @include hover {
       color: var(--color-orange);
     }
 
-    @media (max-width: em(350)){
-      font-size: 22px;        
+    @media (max-width: em(350)) {
+      font-size: 22px;
     }
   }
 }

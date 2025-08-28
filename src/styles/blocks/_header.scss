@@ -6,13 +6,8 @@
 @use './../base/menu-header';
 
 .header {
-  // position: fixed;
   position: relative;
   z-index: 50;
-
-  // top: 0;
-  // left: 0;
-  // width: 100%;
   background-color: var(--color-white);
 
   &__container {
@@ -30,6 +25,19 @@
 
   &__logo {
     padding: 6px 20px;
+    transition: var(--transition);
+
+    @include hover {
+      color: var(--color-orange);
+      background-color: var(--color-bg-hover);
+      border-radius: var(--border-radius);
+    }
+
+    &:focus,
+    &:active {
+      outline: var(--outline-active);
+      background-color: var(--color-focus-active);
+    }
   }
 
   &__actions {
@@ -50,6 +58,12 @@
   &__link {
     padding: 12px 20px;
     transition: var(--transition);
+
+    &:focus,
+    &:active {
+      outline: var(--outline-active);
+      background-color: var(--color-focus-active);
+    }
 
     @include hover {
       color: var(--color-orange);
