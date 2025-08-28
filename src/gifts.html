@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cristmas Shop" />
+  <title>Cristmas Shop | Gifts</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+  <link rel="stylesheet" href="styles/main.scss" />
+  <script type="module" src="js/app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header" class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo logo" aria-label="home" title="Home">
+          <span class="icon icon__logo">the gifts</span></a>
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#" class="menu__link">gifts</a></li>
+              <li class="menu__item"><a href="#" data-goto=".about" class="menu__link">about</a></li>
+              <li class="menu__item"><a href="#" data-goto=".best" class="menu__link">best</a></li>
+              <li class="menu__item"><a href="#" data-goto=".footer__top" class="menu__link">contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__actions">
+          <button type="button" class="icon-menu" aria-label="Open menu" title="Open menu"><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="page__gifts gifts">
+        <div class="gifts__container">
+          <h1 class="gifts__title h1">Achieve health, harmony, and inner strength</h1>
+          <div class="gifts__wrapper">
+            <div class="tabcontainer">
+              <div class="tabheader">
+                <div class="tabheader__items">
+                  <button type="button" class="tabheader__item tabheader__item_active"></button>
+                  <button type="button" class="tabheader__item"></button>
+                </div>
+              </div>
+              <div class="tabcontent"></div>
+              <div class="tabcontent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section" aria-labelledby="blog-title">
+        <header class="section__header">
+          <div class="section__header-inner container">
+            <div class="section__header-info">
+              <p class="section__subtitle tag">A Knowledge Treasure Trove</p>
+              <h2 class="section__title" id="blog-title">Explore FutureTech's In-Depth Blog Posts</h2>
+            </div>
+            <div class="section__actions">
+              <a class="section__link button" href="./blog.html">
+                <span class="icon icon--yellow-arrow">View All Blogs</span>
+              </a>
+            </div>
+          </div>
+        </header>
+        <div class="section__body tabs" data-js-tabs>
+          <h3 class="visually-hidden" id="blog-category-title">
+            Blog category
+          </h3>
+          <header class="tabs__header">
+            <div class="tabs__buttons container" role="tablist" aria-labelledby="blog-category-title">
+              <button class="tabs__button is-active" id="tab-1" type="button" role="tab" aria-controls="tabpanel-1"
+                data-js-tabs-button aria-selected="true">
+                All
+              </button>
+              <button class="tabs__button" id="tab-2" type="button" role="tab" aria-controls="tabpanel-2"
+                data-js-tabs-button aria-selected="false" tabindex="-1">
+                Quantum Computing
+              </button>
+              <button class="tabs__button" id="tab-3" type="button" role="tab" aria-controls="tabpanel-3"
+                data-js-tabs-button aria-selected="false" tabindex="-1">
+                AI Ethics
+              </button>
+              <button class="tabs__button" id="tab-4" type="button" role="tab" aria-controls="tabpanel-4"
+                data-js-tabs-button aria-selected="false" tabindex="-1">
+                Space Exploration
+              </button>
+              <button class="tabs__button" id="tab-5" type="button" role="tab" aria-controls="tabpanel-5"
+                data-js-tabs-button aria-selected="false" tabindex="-1">
+                Biotechnology
+              </button>
+              <button class="tabs__button" id="tab-6" type="button" role="tab" aria-controls="tabpanel-6"
+                data-js-tabs-button aria-selected="false" tabindex="-1">
+                Renewable Energy
+              </button>
+            </div>
+          </header>
+          <div class="tabs__body">
+            <div class="tabs__content is-active" id="tabpanel-1" aria-labelledby="tab-1" tabindex="0"
+              data-js-tabs-content>
+              <ul class="list">
+                <li class="list__item">
+                  <article class="blog-card container">
+                    <div class="blog-card__author person-card">
+                      <img class="person-card__image" src="assets/img/blog/1.png" alt="" width="80" height="80"
+                        loading="lazy" />
+                      <div class="person-card__body">
+                        <p class="person-card__name">John Techson</p>
+                        <p class="person-card__department">Quantum Computing</p>
+                      </div>
+                    </div>
+                    <div class="blog-card__body">
+                      <time class="blog-card__date h6" datetime="2023-10-15">October 15, 2023</time>
+                      <div class="blog-card__info">
+                        <h4 class="blog-card__title">The Quantum Leap in Computing</h4>
+                        <div class="blog-card__description">
+                          <p>Explore the revolution in quantum computing, its applications, and its potential impact on
+                            various industries.</p>
+                        </div>
+                      </div>
+                      <div class="blog-card__actions blog-actions">
+                        <ul class="blog-actions__list">
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button is-active" type="button" aria-label="Dislike"
+                              title="Dislike">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M11.645 21.4107L11.6384 21.4071L11.6158 21.3949C11.5965 21.3844 11.5689 21.3693 11.5336 21.3496C11.4629 21.3101 11.3612 21.2524 11.233 21.1769C10.9765 21.0261 10.6132 20.8039 10.1785 20.515C9.31074 19.9381 8.15122 19.0901 6.9886 18.0063C4.68781 15.8615 2.25 12.6751 2.25 8.75C2.25 5.82194 4.7136 3.5 7.6875 3.5C9.43638 3.5 11.0023 4.29909 12 5.5516C12.9977 4.29909 14.5636 3.5 16.3125 3.5C19.2864 3.5 21.75 5.82194 21.75 8.75C21.75 12.6751 19.3122 15.8615 17.0114 18.0063C15.8488 19.0901 14.6893 19.9381 13.8215 20.515C13.3868 20.8039 13.0235 21.0261 12.767 21.1769C12.6388 21.2524 12.5371 21.3101 12.4664 21.3496C12.4311 21.3693 12.4035 21.3844 12.3842 21.3949L12.3616 21.4071L12.355 21.4107L12.3523 21.4121C12.1323 21.5289 11.8677 21.5289 11.6477 21.4121L11.645 21.4107Z"
+                                    stroke="#666666" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>24.5k</span>
+                            </button>
+                          </li>
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Discuss" title="Discuss">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.48581 19.6888C9.54657 20.2083 10.7392 20.5 12 20.5C16.4183 20.5 20 16.9183 20 12.5C20 8.08172 16.4183 4.5 12 4.5C7.58172 4.5 4 8.08172 4 12.5C4 14.1401 4.49356 15.665 5.34026 16.9341M8.48581 19.6888L4 20.5L5.34026 16.9341M8.48581 19.6888L8.49231 19.6877M5.34026 16.9341L5.34154 16.9308"
+                                    stroke="#666666" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>50</span>
+                            </button>
+                          </li>
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Share" title="Share">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.0384 14.4616L4.1719 11.7951C3.36454 11.4281 3.39898 10.2697 4.22673 9.95134L18.8999 4.30781C19.7087 3.99675 20.5033 4.79139 20.1922 5.60013L14.5487 20.2733C14.2303 21.1011 13.072 21.1355 12.705 20.3281L10.0384 14.4616ZM10.0384 14.4616L14.4231 10.077"
+                                    stroke="#666666" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>20</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a class="blog-card__link button" href="/">
+                      <span class="icon icon--yellow-arrow">View Blog</span>
+                    </a>
+                  </article>
+                </li>
+                <li class="list__item">
+                  <article class="blog-card container">
+                    <div class="blog-card__author person-card">
+                      <img class="person-card__image" src="assets/img/blog/2.png" alt="" width="80" height="80"
+                        loading="lazy" />
+                      <div class="person-card__body">
+                        <p class="person-card__name">Sarah Ethicist</p>
+                        <p class="person-card__department">AI Ethics</p>
+                      </div>
+                    </div>
+                    <div class="blog-card__body">
+                      <time class="blog-card__date h6" datetime="2023-11-05">November 5, 2023</time>
+                      <div class="blog-card__info">
+                        <h4 class="blog-card__title">The Ethical Dilemmas of AI</h4>
+                        <div class="blog-card__description">
+                          <p>EA deep dive into ethical challenges posed by AI, including bias, privacy, and
+                            transparency.</p>
+                        </div>
+                      </div>
+                      <div class="blog-card__actions blog-actions">
+                        <ul class="blog-actions__list">
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Like" title="Like">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M11.645 21.4107L11.6384 21.4071L11.6158 21.3949C11.5965 21.3844 11.5689 21.3693 11.5336 21.3496C11.4629 21.3101 11.3612 21.2524 11.233 21.1769C10.9765 21.0261 10.6132 20.8039 10.1785 20.515C9.31074 19.9381 8.15122 19.0901 6.9886 18.0063C4.68781 15.8615 2.25 12.6751 2.25 8.75C2.25 5.82194 4.7136 3.5 7.6875 3.5C9.43638 3.5 11.0023 4.29909 12 5.5516C12.9977 4.29909 14.5636 3.5 16.3125 3.5C19.2864 3.5 21.75 5.82194 21.75 8.75C21.75 12.6751 19.3122 15.8615 17.0114 18.0063C15.8488 19.0901 14.6893 19.9381 13.8215 20.515C13.3868 20.8039 13.0235 21.0261 12.767 21.1769C12.6388 21.2524 12.5371 21.3101 12.4664 21.3496C12.4311 21.3693 12.4035 21.3844 12.3842 21.3949L12.3616 21.4071L12.355 21.4107L12.3523 21.4121C12.1323 21.5289 11.8677 21.5289 11.6477 21.4121L11.645 21.4107Z"
+                                    stroke="#666666" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>32k</span>
+                            </button>
+                          </li>
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Discuss" title="Discuss">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.48581 19.6888C9.54657 20.2083 10.7392 20.5 12 20.5C16.4183 20.5 20 16.9183 20 12.5C20 8.08172 16.4183 4.5 12 4.5C7.58172 4.5 4 8.08172 4 12.5C4 14.1401 4.49356 15.665 5.34026 16.9341M8.48581 19.6888L4 20.5L5.34026 16.9341M8.48581 19.6888L8.49231 19.6877M5.34026 16.9341L5.34154 16.9308"
+                                    stroke="#666666" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>72</span>
+                            </button>
+                          </li>
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Share" title="Share">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.0384 14.4616L4.1719 11.7951C3.36454 11.4281 3.39898 10.2697 4.22673 9.95134L18.8999 4.30781C19.7087 3.99675 20.5033 4.79139 20.1922 5.60013L14.5487 20.2733C14.2303 21.1011 13.072 21.1355 12.705 20.3281L10.0384 14.4616ZM10.0384 14.4616L14.4231 10.077"
+                                    stroke="#666666" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>18</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a class="blog-card__link button" href="/">
+                      <span class="icon icon--yellow-arrow">View Blog</span>
+                    </a>
+                  </article>
+                </li>
+                <li class="list__item">
+                  <article class="blog-card container">
+                    <div class="blog-card__author person-card">
+                      <img class="person-card__image" src="assets/img/blog/3.png" alt="" width="80" height="80"
+                        loading="lazy" />
+                      <div class="person-card__body">
+                        <p class="person-card__name">Astronomer X</p>
+                        <p class="person-card__department">Space Exploration</p>
+                      </div>
+                    </div>
+                    <div class="blog-card__body">
+                      <time class="blog-card__date h6" datetime="2023-12-10">December 10, 2023</time>
+                      <div class="blog-card__info">
+                        <h4 class="blog-card__title">The Mars Colonization Challenge</h4>
+                        <div class="blog-card__description">
+                          <p>Exploring the technical and logistical challenges of human colonization on Mars.</p>
+                        </div>
+                      </div>
+                      <div class="blog-card__actions blog-actions">
+                        <ul class="blog-actions__list">
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Like" title="Like">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M11.645 21.4107L11.6384 21.4071L11.6158 21.3949C11.5965 21.3844 11.5689 21.3693 11.5336 21.3496C11.4629 21.3101 11.3612 21.2524 11.233 21.1769C10.9765 21.0261 10.6132 20.8039 10.1785 20.515C9.31074 19.9381 8.15122 19.0901 6.9886 18.0063C4.68781 15.8615 2.25 12.6751 2.25 8.75C2.25 5.82194 4.7136 3.5 7.6875 3.5C9.43638 3.5 11.0023 4.29909 12 5.5516C12.9977 4.29909 14.5636 3.5 16.3125 3.5C19.2864 3.5 21.75 5.82194 21.75 8.75C21.75 12.6751 19.3122 15.8615 17.0114 18.0063C15.8488 19.0901 14.6893 19.9381 13.8215 20.515C13.3868 20.8039 13.0235 21.0261 12.767 21.1769C12.6388 21.2524 12.5371 21.3101 12.4664 21.3496C12.4311 21.3693 12.4035 21.3844 12.3842 21.3949L12.3616 21.4071L12.355 21.4107L12.3523 21.4121C12.1323 21.5289 11.8677 21.5289 11.6477 21.4121L11.645 21.4107Z"
+                                    stroke="#666666" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>20k</span>
+                            </button>
+                          </li>
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Discuss" title="Discuss">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.48581 19.6888C9.54657 20.2083 10.7392 20.5 12 20.5C16.4183 20.5 20 16.9183 20 12.5C20 8.08172 16.4183 4.5 12 4.5C7.58172 4.5 4 8.08172 4 12.5C4 14.1401 4.49356 15.665 5.34026 16.9341M8.48581 19.6888L4 20.5L5.34026 16.9341M8.48581 19.6888L8.49231 19.6877M5.34026 16.9341L5.34154 16.9308"
+                                    stroke="#666666" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>31</span>
+                            </button>
+                          </li>
+                          <li class="blog-actions__item">
+                            <button class="blog-actions__button" type="button" aria-label="Share" title="Share">
+                              <span class="blog-actions__icon-wrapper">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M10.0384 14.4616L4.1719 11.7951C3.36454 11.4281 3.39898 10.2697 4.22673 9.95134L18.8999 4.30781C19.7087 3.99675 20.5033 4.79139 20.1922 5.60013L14.5487 20.2733C14.2303 21.1011 13.072 21.1355 12.705 20.3281L10.0384 14.4616ZM10.0384 14.4616L14.4231 10.077"
+                                    stroke="#666666" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </span>
+                              <span>12</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a class="blog-card__link button" href="/">
+                      <span class="icon icon--yellow-arrow">View Blog</span>
+                    </a>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <div class="tabs__content" id="tabpanel-2" aria-labelledby="tab-2" tabindex="0" data-js-tabs-content>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, pariatur? 2
+            </div>
+            <div class="tabs__content" id="tabpanel-3" aria-labelledby="tab-3" tabindex="0" data-js-tabs-content>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, pariatur? 3
+            </div>
+            <div class="tabs__content" id="tabpanel-4" aria-labelledby="tab-4" tabindex="0" data-js-tabs-content>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, pariatur? 4
+            </div>
+            <div class="tabs__content" id="tabpanel-5" aria-labelledby="tab-5" tabindex="0" data-js-tabs-content>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, pariatur? 5
+            </div>
+            <div class="tabs__content" id="tabpanel-6" aria-labelledby="tab-6" tabindex="0" data-js-tabs-content>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, pariatur? 6
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="tel:375291112233" target="_blank" class="footer__link">
+                <img src="assets/img/footer/phone.svg" alt="image" class="footer__link--img">
+                <div class="footer__link--title">+375 (29) 111-22-33</div>
+                <div class="footer__link--text">Call Us</div>
+              </a></li>
+            <li class="footer__item"><a href="https://maps.app.goo.gl/ZQJVxBbhT3cp4AFp7" target="_blank"
+                class="footer__link">
+                <img src="assets/img/footer/location.svg" alt="image" class="footer__link--img">
+                <div class="footer__link--title">Magic forest</div>
+                <div class="footer__link--text">meet us</div>
+              </a></li>
+            <li class="footer__item"><a href="mailto: gifts@magic.com" target="_blank" class="footer__link">
+                <img src="assets/img/footer/mail.svg" alt="image" class="footer__link--img">
+                <div class="footer__link--title">gifts@magic.com</div>
+                <div class="footer__link--text">write us</div>
+              </a></li>
+          </ul>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__soc1al soc1al">
+            <ul class="soc1al__list">
+
+              <li class="soc1al__item">
+                <a href="#" class="soc1al__link" target="_blank" aria-label="telegram" title="telegram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12.2488 15.7229"
+                      stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+
+              <li class="soc1al__item">
+                <a href="#" class="soc1al__link" target="_blank" aria-label="facebook" title="facebook">
+                  <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V9H1V13H4V21H8V13H11L12 9H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1Z"
+                      stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+
+              <li class="soc1al__item">
+                <a href="#" class="soc1al__link" target="_blank" aria-label="instagram" title="instagram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                      stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"
+                      stroke="#181C29" stroke-width="1.5" />
+                    <path d="M17.5 6.51L17.51 6.49889" stroke="#181C29" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+
+              <li class="soc1al__item">
+                <a href="#" class="soc1al__link" target="_blank" aria-label="X" title="X">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.8198 20.7684L3.75317 3.96836C3.44664 3.57425 3.72749 3 4.22678 3H6.70655C6.8917 3 7.06649 3.08548 7.18016 3.23164L20.2468 20.0316C20.5534 20.4258 20.2725 21 19.7732 21H17.2935C17.1083 21 16.9335 20.9145 16.8198 20.7684Z"
+                      stroke="#181C29" stroke-width="1.5" />
+                    <path d="M20 3L4 21" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="footer__copy">© Copyright 2025, All Rights Reserved</div>
+          <a href="https://rs.school/" target="_blank" class="footer__school text__accent text__accent--dark">Made in
+            Rolling Scopes School</a>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

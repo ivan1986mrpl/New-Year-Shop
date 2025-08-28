@@ -1,0 +1,71 @@
+@use '../helpers/function' as *;
+@use '../helpers/mixins' as *;
+
+.slider {
+  &__container {
+    text-align: center;
+  }
+
+  &__subtitle {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__slide-text {
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  &__slide-image {
+    --size-slide: 200px;
+
+    @include square(var(--size-slide));
+
+    border-radius: var(--border-radius-20);
+    overflow: hidden;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+  }
+
+  &__button {
+    line-height: 0;
+    transition: var(--transition);
+    border-radius: var(--border-radius-20);
+
+    @include hover {
+      background-color: var(--color-white);
+      color: var(--color-orange);
+    }
+  }
+
+  &__button-prew {
+    transform: rotate(-180deg);
+  }
+}

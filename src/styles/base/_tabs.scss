@@ -1,61 +1,60 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 
-// @use '../variables';
-
-.tabheader {
-  &__items {
-    margin-bottom: 2rem;
+.tabs {
+  &__header {
   }
 
-  &__item {
-    margin-bottom: 0.625rem;
-    font-size: 1.125rem;
-    color: rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-    transition: 0.3s all;
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(20);
 
-    &_active {
-      font-size: 1.375rem;
-      font-weight: 700;
-      color: #000000;
+    &--compact {
+      display: inline-flex;
+      column-gap: rem(10);
+      padding: rem(10);
+      // background-color: var(--color-dark);
+      border-radius: rem(10);
+
+      .tabs__button {
+        padding-block: rem(18);
+
+        &.is-active {
+          // background-color: var(--color-dark-15);
+        }
+      }
+    }
+  }
+
+  &__button {
+    // padding: fluid(30, 18) rem(11);
+    // color: var(--color-gray-60);
+    background-color: transparent;
+    // border: var(--border);
+    border-radius: rem(8);
+    font-size: rem(18);
+
+    @include hover {
+      // color: var(--color-accent);
+      // border-color: var(--color-accent);
+    }
+
+    &.is-active {
+      // color: var(--color-light);
+      font-weight: 500;
+      // background-color: var(--color-dark-10);
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    &:not(.is-active) {
+      display: none;
+    }
+
+    &:focus-visible {
+      outline-offset: -1rem;
     }
   }
 }
-
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.1;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* 
-Add in HTML
-<div class="tabcontainer">
-    <div class="tabheader">
-        <ul class="tabheader__items">
-            <li class="tabheader__item tabheader__item_active"></li>
-            <li class="tabheader__item"></li>
-        </ul>
-    </div>
-    <div class="tabcontent"></div>
-    <div class="tabcontent"></div>
-</div>
-*/

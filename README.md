@@ -1,3 +1,7 @@
+- https://github.com/rolling-scopes-school/tasks/blob/master/tasks/christmas-shop/christmas-shop.md
+
+- https://www.figma.com/design/zTB01BwWZVoXYK5atH3eZT/Christmas-Shop?node-id=0-1&p=f
+
 Требования к именам коммитов
 
 - Названия коммитов должны быть согласно гайдлайну
