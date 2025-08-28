@@ -35,8 +35,8 @@
 
     &:focus,
     &:active {
-      outline: var(--outline-active);
       background-color: var(--color-focus-active);
+      outline: var(--outline-active);
     }
   }
 
@@ -61,8 +61,8 @@
 
     &:focus,
     &:active {
-      outline: var(--outline-active);
       background-color: var(--color-focus-active);
+      outline: var(--outline-active);
     }
 
     @include hover {

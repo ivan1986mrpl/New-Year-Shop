@@ -1,7 +1,6 @@
 @use '../container' as global;
 @use 'function' as *;
 
-
 @mixin media-mx($value) {
   $width: em($value);
 
@@ -25,4 +24,3 @@
     }
   }
 }
-

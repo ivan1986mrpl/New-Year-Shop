@@ -131,11 +131,12 @@ $iconMenuColor: #000000; // burger button
     width: 40px;
     height: 40px;
     transition: var(--transition);
+
     &:active,
     &:focus {
-      outline: var(--outline-active);
-      border-radius: 4px;
       background-color: var(--color-focus-active);
+      border-radius: 4px;
+      outline: var(--outline-active);
     }
 
     span {

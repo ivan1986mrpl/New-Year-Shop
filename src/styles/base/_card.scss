@@ -2,10 +2,11 @@
 @use '../helpers/mixins' as *;
 
 .card {
+  overflow: hidden;
   height: 100%;
   background-color: var(--color-white);
   border-radius: var(--border-radius-20);
-  overflow: hidden;
+
   &__image {
     background-color: var(--color-light);
   }

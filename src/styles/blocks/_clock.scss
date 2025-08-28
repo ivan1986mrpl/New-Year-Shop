@@ -2,35 +2,40 @@
 @use '../helpers/mixins' as *;
 
 .clock {
-  background-color: var(--color-orange);
+  min-height: 668px;
   background-image: url('../assets/img/shop/bg-forest.png');
   background-position: center;
+
   // background-size: contain;
   background-size: 105% 100%;
   background-repeat: no-repeat;
-  min-height: 668px;
+  background-color: var(--color-orange);
+
   @media (max-width: em(970)) {
     background-size: 125% 100%;
   }
+
   @media (max-width: em(767.98)) {
     background-size: 180% 130%;
   }
+
   @media (max-width: em(560)) {
     background-size: 200% 130%;
   }
+
   &__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 
   &__inner {
-    max-width: 427px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    max-width: 427px;
     text-align: center;
   }
 
@@ -39,6 +44,7 @@
     line-height: 1.52;
     letter-spacing: 0.16em;
     text-transform: uppercase;
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -58,13 +64,13 @@
 }
 
 .countdown {
-  background-color: var(--color-timer);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-  border-radius: var(--border-radius-20);
   padding: 8px 12px 12px;
+  text-align: center;
+  background-color: var(--color-timer);
+  border-radius: var(--border-radius-20);
 
   > div:not(:first-child) {
     position: relative;
@@ -72,12 +78,12 @@
     &::after {
       content: '';
       position: absolute;
-      height: 20px;
-      width: 1px;
-      left: 0;
       top: 50%;
-      translate: 0 -50%;
+      left: 0;
+      width: 1px;
+      height: 20px;
       background-color: var(--color-timer);
+      translate: 0 -50%;
     }
   }
 

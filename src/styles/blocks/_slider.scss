@@ -19,10 +19,10 @@
   }
 
   &__inner {
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-bottom: 20px;
   }
 
   &__slide {
@@ -33,8 +33,8 @@
 
   &__slide-text {
     font-size: 80px;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
     color: var(--color-white);
   }
 
@@ -43,25 +43,25 @@
 
     @include square(var(--size-slide));
 
-    border-radius: var(--border-radius-20);
     overflow: hidden;
+    border-radius: var(--border-radius-20);
   }
 
   &__buttons {
     display: flex;
-    align-items: center;
     justify-content: end;
+    align-items: center;
     gap: 20px;
   }
 
   &__button {
     line-height: 0;
-    transition: var(--transition);
     border-radius: var(--border-radius-20);
+    transition: var(--transition);
 
     @include hover {
-      background-color: var(--color-white);
       color: var(--color-orange);
+      background-color: var(--color-white);
     }
   }
 

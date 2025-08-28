@@ -41,11 +41,13 @@
 for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do
   echo "� Обновление ветки: $branch"
   git checkout "$branch" || continue
-  # Проверка, существует ли ветка на origin
-  if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+
+# Проверка, существует ли ветка на origin
+
+if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
     git branch --set-upstream-to=origin/$branch "$branch"
     git pull
   else
     echo "⚠️  У ветки '$branch' нет соответствующей ветки на origin."
-  fi
+fi
 done

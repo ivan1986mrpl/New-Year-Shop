@@ -2,7 +2,6 @@
 @use '../helpers/mixins' as *;
 
 .soc1al {
-  
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -27,9 +26,9 @@
 
     &:active,
     &:focus {
-      outline: var(--outline-active);
-      border-radius: 4px;
       background-color: var(--color-focus-active);
+      border-radius: 4px;
+      outline: var(--outline-active);
     }
 
     @include hover {
