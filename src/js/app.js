@@ -5,7 +5,7 @@
 //  import headerFon from "./modules/headerFon";
 // import pageNavigation from './modules/page-navigation';
 import scrollUp from './modules/scrollUp';
-//  import popup from "./modules/popup";
+import popup from './modules/popup';
 import initCountdown from './modules/timer-countdown';
 import menuBurger from './modules/menu-burger';
 import TabsCollection from './modules/Tabs';
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // headerFon();
   // sliderComparisonImages();
   // pageNavigation();
-  // popup();
+  popup();
   scrollUp({
     offset: 300,
     maxWidth: 768,
