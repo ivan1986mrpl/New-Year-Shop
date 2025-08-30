@@ -4,7 +4,6 @@ const sliderCristmasShop = () => {
     return;
   }
 
-  const sliderWrapper = slider.querySelector('.slider__wrapper');
   const sliderInner = slider.querySelector('.slider__inner');
   const slides = slider.querySelectorAll('.slider__slide');
   const btnPrev = slider.querySelector('.slider__button-prew');
