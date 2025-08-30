@@ -121,6 +121,11 @@ svg * {
   transition-property: fill, stroke;
 }
 
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
 // padding-inline-start: padding-left;
 // padding-inline-end: padding-rigth;
 // padding-block-start: padding-top;

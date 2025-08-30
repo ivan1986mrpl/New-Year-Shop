@@ -1,6 +1,5 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
-
 .slider {
   &__container {
     text-align: center;
@@ -18,33 +17,41 @@
     }
   }
 
+  &__wrapper {
+    
+  }
+
   &__inner {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+    transition: transform var(--transition); // плавное смещение
+    // overflow-x: auto; //добавляем скролл по горизонтали
   }
 
   &__slide {
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: var(--transition);
+     flex-shrink: 0; // чтобы слайды не сжимались
   }
 
   &__slide-text {
     font-size: 80px;
-    text-align: center;
+    line-height: 1.2;
     text-transform: uppercase;
-    color: var(--color-white);
   }
 
   &__slide-image {
-    --size-slide: 200px;
+    --size-slide-image: 200px;
 
-    @include square(var(--size-slide));
-
+    width: var(--size-slide-image);
+    height: var(--size-slide-image);
     overflow: hidden;
     border-radius: var(--border-radius-20);
+    flex-shrink: 0; // фиксируем размер картинки
   }
 
   &__buttons {
@@ -57,7 +64,6 @@
   &__button {
     line-height: 0;
     border-radius: var(--border-radius-20);
-    transition: var(--transition);
 
     @include hover {
       color: var(--color-orange);
