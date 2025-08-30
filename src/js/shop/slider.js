@@ -47,7 +47,11 @@ const sliderCristmasShop = () => {
   // Обработчик для кнопки "Предыдущий"
   btnPrev.addEventListener('click', () => {
     if (currentIndex > 0) {
-      currentIndex--; // Прокручиваем на 1 слайд назад
+      if (window.innerWidth <= 768) {
+        currentIndex = Math.max(currentIndex - 0.5, 0); // Прокручиваем на половину слайда для экранов <= 768px
+      } else {
+        currentIndex--; // Прокручиваем на 1 слайд для экранов > 768px
+      }
       updatePosition();
       updateButtons();
     }
@@ -56,7 +60,11 @@ const sliderCristmasShop = () => {
   // Обработчик для кнопки "Следующий"
   btnNext.addEventListener('click', () => {
     if (currentIndex < maxIndex) {
-      currentIndex++; // Прокручиваем на 1 слайд вперед
+      if (window.innerWidth <= 768) {
+        currentIndex = Math.min(currentIndex + 0.5, maxIndex); // Прокручиваем на половину слайда для экранов <= 768px
+      } else {
+        currentIndex++; // Прокручиваем на 1 слайд для экранов > 768px
+      }
       updatePosition();
       updateButtons();
     }
