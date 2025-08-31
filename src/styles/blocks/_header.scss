@@ -27,8 +27,8 @@
     padding: 6px 20px;
     transition: var(--transition);
 
-    @media (max-width: em(768)){
-      padding: 5px 14px; 
+    @media (max-width: em(768)) {
+      padding: 5px 14px;
     }
 
     @include hover {

@@ -12,7 +12,7 @@
   padding-top: 122px;
   padding-bottom: 60px;
 
-  @media (max-width: em(380)){
+  @media (max-width: em(380)) {
     background-size: 361% 106%;
     background-position: center -32px;
     padding-bottom: 120px;
@@ -33,9 +33,5 @@
     row-gap: 12px;
     max-width: 430px;
     text-align: center;
-
-    @media (max-width: em(767.98)) {
-      max-width: 426px;
-    }
   }
 }

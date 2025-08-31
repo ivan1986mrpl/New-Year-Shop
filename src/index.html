@@ -120,7 +120,7 @@
               </div>
             </div>
             <div class="slider__buttons">
-              <button type="button" class="slider__button slider__button-prew disabled" aria-label="slider button prew"
+              <button type="button" class="slider__button slider__button-prev disabled" aria-label="slider button prew"
                 title="slider button prew">
                 <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0" y="0" width="56" height="56" rx="20" stroke="white" fill="none" />
@@ -147,52 +147,62 @@
           <h2 class="best__title h2">especially for you</h2>
           <ul class="best__list">
             <li class="best__item">
-              <article class="best__card card">
-                <div class="card__image">
-                  <img src="assets/img/third-best/1.png" width="310" height="230" alt="gift" loading="lazy"
-                    class="card__img" />
-                </div>
-                <div class="card__inner">
-                  <div class="card__subtitle purple">For work</div>
-                  <h3 class="card__title">Console.log Guru</h3>
-                </div>
-              </article>
+              <a href="#popup" class="popup-link">
+                <article class="best__card card">
+                  <div class="card__image">
+                    <img src="assets/img/third-best/1.png" width="310" height="230" alt="gift" loading="lazy"
+                      class="card__img" />
+                  </div>
+                  <div class="card__inner">
+                    <div class="card__subtitle purple">For work</div>
+                    <h3 class="card__title">Console.log Guru</h3>
+                  </div>
+                </article>
+              </a>
             </li>
             <li class="best__item">
-              <article class="best__card card">
-                <div class="card__image">
-                  <img src="assets/img/third-best/2.png" width="310" height="230" alt="gift" loading="lazy"
-                    class="card__img" />
-                </div>
-                <div class="card__inner">
-                  <div class="card__subtitle green">For health</div>
-                  <h3 class="card__title">Hydration Bot</h3>
-                </div>
-              </article>
+              <a href="#popup" class="popup-link">
+                <article class="best__card card">
+                  <div class="card__image">
+                    <img src="assets/img/third-best/2.png" width="310" height="230" alt="gift" loading="lazy"
+                      class="card__img" />
+                  </div>
+                  <div class="card__inner">
+                    <div class="card__subtitle green">For health</div>
+                    <h3 class="card__title">Hydration Bot</h3>
+                  </div>
+                </article>
+              </a>
             </li>
             <li class="best__item">
-              <article class="best__card card">
-                <div class="card__image">
-                  <img src="assets/img/third-best/3.png" width="310" height="230" alt="gift" loading="lazy"
-                    class="card__img" />
-                </div>
-                <div class="card__inner">
-                  <div class="card__subtitle purple">For work</div>
-                  <h3 class="card__title">Merge Master</h3>
-                </div>
-              </article>
+              <a href="#popup" class="popup-link">
+                <article class="best__card card">
+                  <div class="card__image">
+                    <img src="assets/img/third-best/3.png" width="310" height="230" alt="gift" loading="lazy"
+                      class="card__img" />
+                  </div>
+                  <div class="card__inner">
+                    <div class="card__subtitle purple">For work</div>
+                    <h3 class="card__title">Merge Master</h3>
+                  </div>
+                </article>
+              </a>
             </li>
             <li class="best__item">
-              <article class="best__card card">
-                <div class="card__image">
-                  <img src="assets/img/third-best/4.png" width="310" height="230" alt="gift" loading="lazy"
-                    class="card__img" />
-                </div>
-                <div class="card__inner">
-                  <div class="card__subtitle pink">For harmony</div>
-                  <h3 class="card__title">Spontaneous Coding Philosopher</h3>
-                </div>
-              </article>
+              <a href="#popup" class="popup-link">
+                <article class="best__card card">
+                  <div class="card__image">
+                    <img src="assets/img/third-best/4.png" width="310" height="230" alt="gift" loading="lazy"
+                      class="card__img" />
+                  </div>
+                  <div class="card__inner">
+                    <div class="card__subtitle pink">For harmony</div>
+                    <h3 class="card__title">
+                      Spontaneous Coding Philosopher
+                    </h3>
+                  </div>
+                </article>
+              </a>
             </li>
           </ul>
         </div>
@@ -323,13 +333,150 @@
       </div>
     </footer>
 
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <button type="button" class="popup__close close-popup" aria-label="Close popup">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 10L10 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10 10L30 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <article class="popup-card">
+            <div class="popup-card__image">
+              <img src="assets/img/third-best/2.png" width="400" height="230" alt="gift" loading="lazy"
+                class="popup-card__img" />
+            </div>
+            <div class="popup-card__inner">
+              <div class="popup-card__inner-top">
+                <div class="popup-card__subtitle green">For work</div>
+                <h3 class="popup-card__title">Console.log Guru</h3>
+                <div class="popup-card__description">
+                  <p>
+                    Uses console.log like a crystal ball to find any issue.
+                  </p>
+                </div>
+              </div>
+              <div class="popup-card__inner-rating rating-modal">
+                <h4 class="rating-modal__title">Adds superpowers to:</h4>
+                <ul class="rating-modal__wrapper">
+                  <li class="rating-modal__item">
+                    <div class="rating-modal__text">Dream</div>
+                    <div class="rating-modal__value">+500</div>
+                    <div class="rating-modal__rating">
+                      <div class="simple-rating">
+                        <div class="simple-rating__items">
+                          <input id="simple-rating__5" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="5" />
+                          <label for="simple-rating__5" class="simple-rating__label"></label>
+                          <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="4" />
+                          <label for="simple-rating__4" class="simple-rating__label"></label>
+                          <input id="simple-rating__3" type="radio" class="simple-rating__item" checked
+                            name="simple-rating" value="3" />
+                          <label for="simple-rating__3" class="simple-rating__label"></label>
+                          <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="2" />
+                          <label for="simple-rating__2" class="simple-rating__label"></label>
+                          <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="1" />
+                          <label for="simple-rating__1" class="simple-rating__label"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="rating-modal__item">
+                    <div class="rating-modal__text">Live</div>
+                    <div class="rating-modal__value">+500</div>
+                    <div class="rating-modal__rating">
+                      <div class="simple-rating">
+                        <div class="simple-rating__items">
+                          <input id="simple-rating__51" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="5" />
+                          <label for="simple-rating__51" class="simple-rating__label"></label>
+                          <input id="simple-rating__41" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="4" />
+                          <label for="simple-rating__41" class="simple-rating__label"></label>
+                          <input id="simple-rating__31" type="radio" class="simple-rating__item" checked
+                            name="simple-rating" value="3" />
+                          <label for="simple-rating__31" class="simple-rating__label"></label>
+                          <input id="simple-rating__21" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="2" />
+                          <label for="simple-rating__21" class="simple-rating__label"></label>
+                          <input id="simple-rating__11" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="1" />
+                          <label for="simple-rating__11" class="simple-rating__label"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="rating-modal__item">
+                    <div class="rating-modal__text">Create</div>
+                    <div class="rating-modal__value">+200</div>
+                    <div class="rating-modal__rating">
+                      <div class="simple-rating">
+                        <div class="simple-rating__items">
+                          <input id="simple-rating__52" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="5" />
+                          <label for="simple-rating__52" class="simple-rating__label"></label>
+                          <input id="simple-rating__42" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="4" />
+                          <label for="simple-rating__42" class="simple-rating__label"></label>
+                          <input id="simple-rating__32" type="radio" class="simple-rating__item" checked
+                            name="simple-rating" value="3" />
+                          <label for="simple-rating__32" class="simple-rating__label"></label>
+                          <input id="simple-rating__22" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="2" />
+                          <label for="simple-rating__22" class="simple-rating__label"></label>
+                          <input id="simple-rating__12" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="1" />
+                          <label for="simple-rating__12" class="simple-rating__label"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="rating-modal__item">
+                    <div class="rating-modal__text">Love</div>
+                    <div class="rating-modal__value">+500</div>
+                    <div class="rating-modal__rating">
+                      <div class="simple-rating">
+                        <div class="simple-rating__items">
+                          <input id="simple-rating__53" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="5" />
+                          <label for="simple-rating__53" class="simple-rating__label"></label>
+                          <input id="simple-rating__43" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="4" />
+                          <label for="simple-rating__43" class="simple-rating__label"></label>
+                          <input id="simple-rating__33" type="radio" class="simple-rating__item" checked
+                            name="simple-rating" value="3" />
+                          <label for="simple-rating__33" class="simple-rating__label"></label>
+                          <input id="simple-rating__23" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="2" />
+                          <label for="simple-rating__23" class="simple-rating__label"></label>
+                          <input id="simple-rating__13" type="radio" class="simple-rating__item" name="simple-rating"
+                            value="1" />
+                          <label for="simple-rating__13" class="simple-rating__label"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
 
     <div class="scroll-up">
       <svg class="scroll-up__svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 52 52">
         <path class="scroll-up__path" d="M 24,0 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48" />
       </svg>
     </div>
-
   </div>
 </body>
 
