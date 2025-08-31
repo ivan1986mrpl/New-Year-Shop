@@ -6,6 +6,8 @@
   min-height: 1300px;
   background-color: var(--color-orange);
   border-radius: var(--border-radius-20);
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &::before {
     content: '';

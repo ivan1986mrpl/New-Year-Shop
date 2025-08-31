@@ -1,6 +1,8 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 .slider {
+  padding-top: 67px;
+  padding-bottom: 60px;
   &__container {
     text-align: center;
   }
@@ -18,7 +20,6 @@
   }
 
   &__wrapper {
-    
   }
 
   &__inner {
@@ -35,7 +36,7 @@
     align-items: center;
     gap: 20px;
     transition: var(--transition);
-     flex-shrink: 0; // чтобы слайды не сжимались
+    flex-shrink: 0; // чтобы слайды не сжимались
   }
 
   &__slide-text {

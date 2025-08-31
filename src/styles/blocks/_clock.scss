@@ -2,12 +2,14 @@
 @use '../helpers/mixins' as *;
 
 .clock {
-  min-height: 668px;
   background-image: url('../assets/img/shop/bg-forest.png');
-  background-position: center;
+  // background-position: center;
+  background-position: 0 4px;
+  padding-top: 180px;
+  padding-bottom: 120px;
 
   // background-size: contain;
-  background-size: 105% 100%;
+  background-size: 100% 106%;
   background-repeat: no-repeat;
   background-color: var(--color-orange);
 
@@ -67,7 +69,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px 12px;
+  padding: 8px 20px 12px;
   text-align: center;
   background-color: var(--color-timer);
   border-radius: var(--border-radius-20);
