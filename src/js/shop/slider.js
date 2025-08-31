@@ -6,75 +6,141 @@ const sliderCristmasShop = () => {
 
   const sliderInner = slider.querySelector('.slider__inner');
   const slides = slider.querySelectorAll('.slider__slide');
-  const btnPrev = slider.querySelector('.slider__button-prew');
+  const btnPrev = slider.querySelector('.slider__button-prev');
   const btnNext = slider.querySelector('.slider__button-next');
+
+  if (!sliderInner || slides.length === 0 || !btnPrev || !btnNext) {
+    return;
+  }
 
   let currentIndex = 0;
   let slideWidth;
   let maxIndex;
 
-  // Обновление настроек слайдера (при изменении размера экрана)
+  let isDragging = false;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let animationID = 0;
+
   function updateSliderSettings() {
     const gap = parseInt(getComputedStyle(sliderInner).gap) || 0;
-    slideWidth = slides[0].offsetWidth + gap; // Ширина одного слайда
-
-    // Максимальный индекс слайда (когда все слайды прокручены)
+    slideWidth = slides[0].offsetWidth + gap;
     maxIndex = slides.length - 1;
 
     currentIndex = 0;
+    currentTranslate = 0;
+    prevTranslate = 0;
+
+    setSliderPosition();
+    updateButtons();
+  }
+
+  function setSliderPosition() {
+    sliderInner.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function updatePosition() {
+    currentTranslate = -currentIndex * slideWidth;
+    prevTranslate = currentTranslate;
+    setSliderPosition();
+  }
+
+  function updateButtons() {
+    btnPrev.classList.toggle('disabled', currentIndex === 0);
+    btnNext.classList.toggle('disabled', currentIndex >= maxIndex);
+    btnPrev.disabled = currentIndex === 0;
+    btnNext.disabled = currentIndex >= maxIndex;
+  }
+
+  function animation() {
+    setSliderPosition();
+    if (isDragging) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  function touchStart(index) {
+    return function (event) {
+      isDragging = true;
+      startPos = getPositionX(event);
+      animationID = requestAnimationFrame(animation);
+      sliderInner.classList.add('grabbing');
+    };
+  }
+
+  function touchMove(event) {
+    if (!isDragging) {
+      return;
+    }
+    const currentPosition = getPositionX(event);
+    const diff = currentPosition - startPos;
+    currentTranslate = prevTranslate + diff;
+  }
+
+  function touchEnd() {
+    cancelAnimationFrame(animationID);
+    isDragging = false;
+    sliderInner.classList.remove('grabbing');
+
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -slideWidth / 4 && currentIndex < maxIndex) {
+      currentIndex++;
+    }
+    if (movedBy > slideWidth / 4 && currentIndex > 0) {
+      currentIndex--;
+    }
 
     updatePosition();
     updateButtons();
   }
 
-  // Обновление позиции слайдера
-  function updatePosition() {
-    sliderInner.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+  function getPositionX(event) {
+    return event.type.includes('mouse')
+      ? event.pageX
+      : event.touches[0].clientX;
   }
 
-  // Обновление состояния кнопок (активные/неактивные)
-  function updateButtons() {
-    currentIndex === 0
-      ? btnPrev.classList.add('disabled')
-      : btnPrev.classList.remove('disabled');
-
-    currentIndex >= maxIndex
-      ? btnNext.classList.add('disabled')
-      : btnNext.classList.remove('disabled');
-  }
-
-  // Обработчик для кнопки "Предыдущий"
   btnPrev.addEventListener('click', () => {
     if (currentIndex > 0) {
       if (window.innerWidth <= 768) {
-        currentIndex = Math.max(currentIndex - 0.5, 0); // Прокручиваем на половину слайда для экранов <= 768px
+        currentIndex = Math.max(currentIndex - 0.5, 0);
       } else {
-        currentIndex--; // Прокручиваем на 1 слайд для экранов > 768px
+        currentIndex--;
       }
       updatePosition();
       updateButtons();
     }
   });
 
-  // Обработчик для кнопки "Следующий"
   btnNext.addEventListener('click', () => {
     if (currentIndex < maxIndex) {
       if (window.innerWidth <= 768) {
-        currentIndex = Math.min(currentIndex + 0.5, maxIndex); // Прокручиваем на половину слайда для экранов <= 768px
+        currentIndex = Math.min(currentIndex + 0.5, maxIndex);
       } else {
-        currentIndex++; // Прокручиваем на 1 слайд для экранов > 768px
+        currentIndex++;
       }
       updatePosition();
       updateButtons();
     }
   });
 
-  // Обработчик изменения размера окна
-  window.addEventListener('resize', () => {
-    updateSliderSettings(); // Пересчитываем настройки слайдера при изменении ширины экрана
+  window.addEventListener('resize', updateSliderSettings);
+
+  sliderInner.addEventListener('touchstart', touchStart(), { passive: true });
+  sliderInner.addEventListener('touchmove', touchMove, { passive: true });
+  sliderInner.addEventListener('touchend', touchEnd);
+
+  sliderInner.addEventListener('mousedown', touchStart());
+  sliderInner.addEventListener('mousemove', touchMove);
+  sliderInner.addEventListener('mouseup', touchEnd);
+  sliderInner.addEventListener('mouseleave', () => {
+    if (isDragging) {
+      touchEnd();
+    }
   });
 
-  // Инициализация слайдера
   updateSliderSettings();
 };
 

@@ -8,8 +8,6 @@ import {
 
 export default function popup() {
   const popupLinks = document.querySelectorAll('.popup-link');
-  //const body = document.querySelector('body');
-  //const lockPadding = document.querySelectorAll('.lock-padding');
 
   if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {

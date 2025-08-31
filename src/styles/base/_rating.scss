@@ -1,0 +1,53 @@
+.simple-rating::before {
+  content: '★★★★★';
+  display: block;
+}
+.simple-rating {
+  --rating-hover: #ffef9f;
+  --rating-light: #ffd300;
+  --rating-dark: #986518;
+
+  position: relative;
+  font-size: 24px;
+  display: inline-block;
+  &__items {
+    position: absolute;
+    //width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+  }
+  &__item {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+  }
+  &__label {
+    flex: 0 0 20%;
+    height: 100%;
+    cursor: pointer;
+    color: var(--rating-light);
+  }
+  &__label::before {
+    content: '★';
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+}
+.simple-rating__item:checked,
+.simple-rating__item:checked ~ .simple-rating__label {
+  /* применить стили ко всем следующим объектам */
+  color: var(--rating-dark);
+}
+.simple-rating__label:hover,
+.simple-rating__label:hover ~ .simple-rating__label,
+.simple-rating__label:checked ~ .simple-rating__label:hover {
+  color: var(--rating-hover);
+}
