@@ -23,11 +23,12 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     gap: 12px;
+    justify-content: center;
 
-    @media (max-width: em(767.98)) {
-      grid-template-columns: repeat(2, 1fr);
+    @media (max-width: em(768)) {
+      grid-template-columns: repeat(2, auto);
     }
 
     @media (max-width: em(450)) {

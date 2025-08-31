@@ -17,12 +17,13 @@
     background-size: 125% 100%;
   }
 
-  @media (max-width: em(767.98)) {
-    background-size: 180% 130%;
+  @media (max-width: em(768)) {
+    background-size: 180% 100%;
+    background-position: -320px 0;
   }
 
-  @media (max-width: em(560)) {
-    background-size: 200% 130%;
+  @media (max-width: em(380)) {
+    background-size: 240% 100%;
   }
 
   &__container {

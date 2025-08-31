@@ -12,6 +12,12 @@
   padding-top: 122px;
   padding-bottom: 60px;
 
+  @media (max-width: em(380)){
+    background-size: 361% 106%;
+    background-position: center -32px;
+    padding-bottom: 120px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
