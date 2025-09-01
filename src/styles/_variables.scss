@@ -6,7 +6,6 @@
   --font-family: 'Montserrat', sans-serif;
   --second-family: 'Allura', sans-serif;
 
-  // --third-family: 'SF Pro', sans-serif;
   --font-size: #{rem(16)};
   --font-size-mobile: #{rem(16)};
   --font-weight: 600;
@@ -37,22 +36,4 @@
   --border-radius: 12px;
   --border-radius-20: 20px;
   --transition: 0.3s;
-
-  // --color-black: #{rgba(#000000, 10%)};
-
-  // --border: #{rem(1)} solid var(--color-dark);
-  // --border-radius: #{rem(10)};
-
-  //  from inspect style
-  // --primary: #ff4646;
-  // --dark: #181c29;
-  // --static-white: #fff;
-  // --content-background: #ecf3f8;
-  // --tag-purple: #4361ff;
-  // --tag-pink: #ff43f7;
-  // --tag-green: #06a44f;
-
-  // --primary-10: rgba(255, 70, 70, 0.1);
-
-  --overlay: rgba(24, 28, 41, 0.8);
 }

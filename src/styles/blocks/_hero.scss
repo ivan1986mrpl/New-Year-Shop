@@ -18,6 +18,12 @@
     padding-bottom: 120px;
   }
 
+  @media (max-width: em(360)) {
+    background-size: 340% 88%;
+    background-position: center 0;
+    padding-bottom: 120px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
