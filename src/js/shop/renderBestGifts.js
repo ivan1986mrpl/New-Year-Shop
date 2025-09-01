@@ -7,15 +7,17 @@ function getRandomProducts(products, count = 4) {
 
 function renderBestGifts(products) {
   const bestList = document.querySelector('.best__list');
-  if (!bestList) return;
+  if (!bestList) {
+    return;
+  }
 
-  bestList.innerHTML = ''; // очищаем текущие карточки
+  bestList.innerHTML = '';
 
   const selected = getRandomProducts(products);
 
   selected.forEach((product, index) => {
     const li = document.createElement('li');
-    li.classList.add('best__item');
+    li.classList.add('list__item');
 
     const categoryColor = getCategoryColor(product.category);
 

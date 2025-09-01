@@ -78,8 +78,8 @@
 .list {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 12px;
   justify-content: center;
+  gap: 12px;
 
   @media (max-width: em(768)) {
     grid-template-columns: repeat(2, auto);

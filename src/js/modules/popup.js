@@ -7,10 +7,10 @@ import {
 } from '../function';
 
 // Загрузка звука для открытия попапа
-const popupOpenSound = new Audio('../../assets/audio/modal.mp3'); // путь к звуку
+const popupOpenSound = new Audio('assets/audio/modal.mp3'); // путь к звуку
 
 // Громкость звука от 0 до 1 (0 — без звука, 1 — максимальная громкость)
-const volume = 0.1;
+const volume = 0.4;
 
 const playSound = (sound) => {
   sound.volume = volume;

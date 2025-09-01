@@ -2,28 +2,34 @@
 @use '../helpers/mixins' as *;
 
 .clock {
-  background-image: url('../assets/img/shop/bg-forest.png');
-  // background-position: center;
-  background-position: 0 4px;
   padding-top: 180px;
   padding-bottom: 180px;
-
-  // background-size: contain;
+  background-image: url('../assets/img/fourth/clock-bg.png');
+  background-position: 0 4px;
   background-size: 100% 106%;
   background-repeat: no-repeat;
   background-color: var(--color-orange);
 
   @media (max-width: em(970)) {
-    background-size: 125% 100%;
+    background-size: 125% 102%;
   }
 
   @media (max-width: em(768)) {
-    background-size: 180% 100%;
     background-position: -320px 0;
+    background-size: 180% 102%;
+  }
+
+  @media (max-width: em(600)) {
+    background-position: -220px 0;
+  }
+
+  @media (max-width: em(460)) {
+    background-position: -220px 0;
+    background-size: 220% 102%;
   }
 
   @media (max-width: em(380)) {
-    background-size: 240% 100%;
+    background-size: 240% 102%;
   }
 
   &__container {
@@ -91,6 +97,6 @@
   }
 
   @media (max-width: em(350)) {
-    padding: rem(3);
+    padding: 3px 3px 3px;
   }
 }

@@ -7,7 +7,7 @@ function createProductCart(products, containerElement) {
 
   products.forEach((product, index) => {
     const li = document.createElement('li');
-    li.classList.add('gifts__item');
+    li.classList.add('list__item');
 
     const categoryColor = getCategoryColor(product.category);
 

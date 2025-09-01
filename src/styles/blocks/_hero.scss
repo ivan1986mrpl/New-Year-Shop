@@ -3,25 +3,25 @@
 
 .hero {
   min-height: 524px;
-  background-image: url('../assets/img/hero/hero-bg.png');
+  padding-top: 122px;
+  padding-bottom: 60px;
+  background-image: url('../assets/img/hero/hero-bg1.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--color-orange);
   border-radius: 20px 20px 0 0;
-  padding-top: 122px;
-  padding-bottom: 60px;
 
   @media (max-width: em(380)) {
-    background-size: 361% 106%;
-    background-position: center -32px;
     padding-bottom: 120px;
+    background-position: center -32px;
+    background-size: 361% 106%;
   }
 
   @media (max-width: em(360)) {
-    background-size: 340% 88%;
-    background-position: center 0;
     padding-bottom: 120px;
+    background-position: center 0;
+    background-size: 340% 88%;
   }
 
   &__container {

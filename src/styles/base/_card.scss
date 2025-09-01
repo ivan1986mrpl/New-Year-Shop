@@ -3,16 +3,17 @@
 
 .card {
   overflow: hidden;
-  max-width: 310px;
   width: 100%;
+  max-width: 310px;
   height: 100%;
   background-color: var(--color-white);
   border-radius: var(--border-radius-20);
   transition-duration: var(--transition);
 
   @include hover {
-    transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+
     .card__title {
       color: var(--color-orange);
     }
@@ -23,7 +24,7 @@
   }
 
   &__inner {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     text-align: left;
   }
 
@@ -44,9 +45,11 @@
     color: var(--color-dark);
   }
 }
+
 .popup-link {
   height: 100%;
 }
+
 /* 
 <article class="best__card card">
   <div class="card__image">

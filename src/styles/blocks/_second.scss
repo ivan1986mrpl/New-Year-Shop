@@ -4,14 +4,15 @@
 .about {
   padding-top: 60px;
   padding-bottom: 60px;
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1rem;
+    min-height: 528px;
     background-color: var(--color-white);
     border-radius: 20px;
-    min-height: 528px;
 
     @media (max-width: em(750)) {
       grid-template-columns: auto;
@@ -32,9 +33,10 @@
     }
 
     @media (max-width: em(750)) {
-      padding: 60px 0px 0px 0px;
-      margin-left: 12px;
       max-width: 100%;
+      margin-left: 12px;
+      padding: 60px 0 0;
+
       // text-align: center;
     }
   }
@@ -61,6 +63,7 @@
 
     img {
       min-height: 528px;
+
       @media (max-width: em(750)) {
         width: 100%;
         height: 100%;

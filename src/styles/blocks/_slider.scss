@@ -1,11 +1,14 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
+
 .slider {
   padding-top: 67px;
   padding-bottom: 60px;
+
   @media (max-width: em(768)) {
     padding-top: 63px;
   }
+
   &__container {
     text-align: center;
   }
@@ -20,6 +23,7 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
     @media (max-width: em(768)) {
       &:not(:last-child) {
         margin-bottom: 17px;
@@ -40,11 +44,11 @@
   }
 
   &__slide {
+    flex-shrink: 0; // чтобы слайды не сжимались
     display: flex;
     align-items: center;
     gap: 20px;
     transition: var(--transition);
-    flex-shrink: 0; // чтобы слайды не сжимались
   }
 
   &__slide-text {
@@ -56,11 +60,11 @@
   &__slide-image {
     --size-slide-image: 200px;
 
+    flex-shrink: 0; // фиксируем размер картинки
+    overflow: hidden;
     width: var(--size-slide-image);
     height: var(--size-slide-image);
-    overflow: hidden;
     border-radius: var(--border-radius-20);
-    flex-shrink: 0; // фиксируем размер картинки
   }
 
   &__buttons {
