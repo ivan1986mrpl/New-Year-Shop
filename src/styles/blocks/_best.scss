@@ -20,19 +20,4 @@
       margin-bottom: 20px;
     }
   }
-
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 12px;
-    justify-content: center;
-
-    @media (max-width: em(768)) {
-      grid-template-columns: repeat(2, auto);
-    }
-
-    @media (max-width: em(450)) {
-      grid-template-columns: auto;
-    }
-  }
 }

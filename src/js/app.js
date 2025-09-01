@@ -10,6 +10,11 @@ import initCountdown from './modules/timer-countdown';
 import menuBurger from './modules/menu-burger';
 import TabsCollection from './modules/Tabs';
 import { sliderCristmasShop } from './shop/slider';
+import products from './shop/products.json';
+import { renderBestGifts } from './shop/renderBestGifts.js';
+// import { createProductCart } from './shop/createProductCart.js';
+import renderProductsInTabs from './shop/renderProductsInTabs.js';
+import setupGiftModal from './shop/setupGiftModal.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   // getting today's date and displaying it on a page in Russian or English (HTML and JavaScript) <div class="date"></div>
@@ -35,5 +40,10 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   menuBurger();
   new TabsCollection();
+
   sliderCristmasShop();
+  renderBestGifts(products);
+  // createProductCart(products);
+  renderProductsInTabs(products);
+  setupGiftModal(products);
 });

@@ -148,8 +148,8 @@
 // ========================================
 // <div class="pulse"><img src="assets/img/instagram.svg" alt="button"></div>
 
-/* 
-$pulseColor: var(--hover-color); 
+
+$pulseColor: var(--color-white); 
 .pulse {
     display: flex;
     justify-content: center;
@@ -160,7 +160,7 @@ $pulseColor: var(--hover-color);
     padding: 20px;
     border-radius: rem(20);
     //border-radius: 50%;
-    background: $pulseColor;
+    // background: $pulseColor;
     //width: 60px;
     //height: 60px;
     img {
@@ -196,7 +196,7 @@ $pulseColor: var(--hover-color);
         transform: scale(1);
         opacity: 0;
     }
-}   */
+}   
 // ====================================
 
 /* 
