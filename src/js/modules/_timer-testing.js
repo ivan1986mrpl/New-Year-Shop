@@ -50,15 +50,15 @@ export default function initCountdown(
   }
 
   if (!parentSelector || !to) {
-    console.error('[Countdown] Не передан селектор или конечное время.');
+    // console.error('[Countdown] Не передан селектор или конечное время.');
     return;
   }
 
   const rootElements = document.querySelectorAll(parentSelector);
   if (rootElements.length === 0) {
-    console.warn(
-      `[Countdown] Элементы по селектору не найдены: ${parentSelector}`,
-    );
+    //   console.warn(
+    //     `[Countdown] Элементы по селектору не найдены: ${parentSelector}`,
+    //   );
     return;
   }
 
@@ -66,13 +66,13 @@ export default function initCountdown(
   if (typeof to === 'string') {
     toCountDate = new Date(to);
     if (isNaN(toCountDate)) {
-      console.error(`[Countdown] Неверная дата: ${to}`);
+      // console.error(`[Countdown] Неверная дата: ${to}`);
       return;
     }
   } else if (typeof to === 'number') {
     toCountDate = new Date(Date.now() + to * 1000);
   } else {
-    console.error('[Countdown] Аргумент "to" должен быть строкой или числом.');
+    // console.error('[Countdown] Аргумент "to" должен быть строкой или числом.');
     return;
   }
 
@@ -132,39 +132,3 @@ export default function initCountdown(
 
   countdown();
 }
-
-/* 
-// ✅ Вариант 1: таймер до конкретной даты (автоопределение языка по <html lang>)
-initCountdown('.countdown', '30 Aug 2025 23:59:00', 'Таймер завершён');
-
-// ✅ Вариант 2: таймер на 1 час (3600 секунд) и явный язык
-initCountdown('.countdown', 3600, 'Таймер завершён', 'ru');
-
-// ✅ Вариант 3: на украинском, таймер на сутки
-initCountdown('.countdown', 86400, 'Час вийшов!', 'ua');
-
-// ✅ Вариант 4: на английском
-initCountdown('.countdown', '1 Sep 2025 15:00', 'Countdown is over', 'en');
-
-*/
-
-/* 
-<div class="countdown">
-  <div class="days">
-    <p class="num">0</p>
-    <span class="name">дней</span>
-  </div>
-  <div class="hours">
-    <p class="num">0</p>
-    <span class="name">часов</span>
-  </div>
-  <div class="minutes">
-    <p class="num">0</p>
-    <span class="name">минут</span>
-  </div>
-  <div class="seconds">
-    <p class="num">0</p>
-    <span class="name">секунд</span>
-  </div>
-</div>
-*/

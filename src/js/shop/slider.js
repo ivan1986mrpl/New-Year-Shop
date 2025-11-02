@@ -60,7 +60,7 @@ const sliderCristmasShop = () => {
     }
   }
 
-  function touchStart(index) {
+  function touchStart() {
     return function (event) {
       isDragging = true;
       startPos = getPositionX(event);

@@ -140,6 +140,7 @@ $iconMenuColor: #000000; // burger button
     }
 
     span {
+      top: calc(50% - rem(1));
       width: 0;
     }
 
@@ -160,10 +161,6 @@ $iconMenuColor: #000000; // burger button
 
     &::after {
       bottom: 14px;
-    }
-
-    span {
-      top: calc(50% - rem(1));
     }
   }
 }
