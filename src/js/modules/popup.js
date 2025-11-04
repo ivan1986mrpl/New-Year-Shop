@@ -1,13 +1,7 @@
-import {
-  // body,
-  // lockPadding,
-  bodyLock,
-  bodyUnlock,
-  bodyLockStatus,
-} from '../function';
+import { bodyLock, bodyUnlock, bodyLockStatus } from '../function';
 
 // Загрузка звука для открытия попапа
-const popupOpenSound = new Audio('assets/audio/modal.mp3'); // путь к звуку
+const popupOpenSound = new Audio('assets/audio/modal.mp3');
 
 // Громкость звука от 0 до 1 (0 — без звука, 1 — максимальная громкость)
 const volume = 0.4;
@@ -19,19 +13,16 @@ const playSound = (sound) => {
 };
 
 export default function popup() {
-  // Делегирование кликов по всему body
   document.body.addEventListener('click', (e) => {
-    // Открытие попапа по клику на .popup-link
     const popupLink = e.target.closest('.popup-link');
     if (popupLink) {
       e.preventDefault();
       const popupName = popupLink.getAttribute('href').replace('#', '');
       const currentPopup = document.getElementById(popupName);
       popupOpen(currentPopup);
-      return; // чтобы дальше не искать close-popup при клике по popup-link
+      return;
     }
 
-    // Закрытие попапа по клику на кнопку закрытия
     const closeBtn = e.target.closest('.close-popup');
     if (closeBtn) {
       e.preventDefault();
@@ -41,7 +32,6 @@ export default function popup() {
     }
   });
 
-  // Делегирование клика по затемнённой области модального окна
   document.body.addEventListener('click', (e) => {
     const openPopup = document.querySelector('.popup.open');
     if (
@@ -53,7 +43,6 @@ export default function popup() {
     }
   });
 
-  // Закрытие по Escape
   document.addEventListener('keydown', (e) => {
     if (e.code === 'Escape') {
       const popupActive = document.querySelector('.popup.open');

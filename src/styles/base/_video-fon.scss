@@ -1,8 +1,6 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 
-// @use '../variables';
-
 .hero {
   position: relative; // задать секции, на которой висит видео
   overflow: hidden;

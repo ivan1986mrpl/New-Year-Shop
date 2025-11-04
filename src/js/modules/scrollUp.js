@@ -47,7 +47,6 @@ export default function scrollUp({
     });
   });
 
-  // Инициализация состояния кнопки при загрузке
   toggleVisibility();
 }
 

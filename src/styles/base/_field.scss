@@ -1,8 +1,6 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 
-// @use '../variables';
-
 .field {
   --field-color-dark: #000000;
   --field-color-light: #d9d9d9;

@@ -1,8 +1,6 @@
 @use '../helpers/function' as *;
 @use '../helpers/mixins' as *;
 
-// @use '../variables';
-
 .spollers__title {
   position: relative;
   width: 100%;
@@ -34,8 +32,6 @@
 .init .spollers__title.active::after {
   transform: rotate(-180deg);
 }
-
-// указать свои стили
 
 /* 
 add this markup to index.html

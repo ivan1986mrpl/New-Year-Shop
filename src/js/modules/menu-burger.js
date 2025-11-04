@@ -19,7 +19,6 @@ export default function menuBurger() {
 
     menu.querySelectorAll('.menu__link').forEach((link) => {
       link.addEventListener('click', () => {
-        //скролл к секциям
         menu.classList.remove('menu-open');
         menuBtn.classList.remove('menu-open');
         document.body.classList.remove('lock');

@@ -36,12 +36,11 @@
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
-    transition: transform var(--transition); // плавное смещение
-    // overflow-x: auto; //добавляем скролл по горизонтали
+    transition: transform var(--transition);
   }
 
   &__slide {
-    flex-shrink: 0; // чтобы слайды не сжимались
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -57,7 +56,7 @@
   &__slide-image {
     --size-slide-image: 200px;
 
-    flex-shrink: 0; // фиксируем размер картинки
+    flex-shrink: 0;
     overflow: hidden;
     width: var(--size-slide-image);
     height: var(--size-slide-image);

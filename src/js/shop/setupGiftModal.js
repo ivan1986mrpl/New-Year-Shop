@@ -1,30 +1,34 @@
 import getCategoryColor from './getCategoryColor';
 
-/**
- * @param {Array} products - список подарков
- */
 export default function setupGiftModal(products) {
   const modal = document.querySelector('.popup');
+  if (!modal) {
+    return;
+  }
+
   const modalTitle = modal.querySelector('.popup-card__title');
   const modalSubtitle = modal.querySelector('.popup-card__subtitle');
   const modalDescription = modal.querySelector('.popup-card__description p');
   const modalImage = modal.querySelector('.popup-card__img');
 
-  document.querySelectorAll('.popup-link').forEach((link, index) => {
-    link.addEventListener('click', () => {
-      const product = products[index];
-      if (!product) {
-        return;
-      }
+  document.body.addEventListener('click', (e) => {
+    const link = e.target.closest('.popup-link');
+    if (!link) {
+      return;
+    }
 
-      // Обновляем заголовки и описание
-      modalTitle.textContent = product.name;
-      modalSubtitle.textContent = product.category;
-      modalSubtitle.className = `popup-card__subtitle ${getCategoryColor(product.category)}`;
-      modalDescription.textContent = product.description;
+    const productId = link.dataset.productId;
+    const imgIndex = link.dataset.imgIndex;
+    const product = products.find((p) => p.id === productId);
+    if (!product) {
+      return;
+    }
 
-      // Обновляем картинку
-      modalImage.src = `assets/img/third-best/${(index % 4) + 1}.png`;
-    });
+    modalTitle.textContent = product.name;
+    modalSubtitle.textContent = product.category;
+    modalSubtitle.className = `popup-card__subtitle ${getCategoryColor(product.category)}`;
+    modalDescription.textContent = product.description;
+
+    modalImage.src = `assets/img/third-best/${imgIndex}.png`;
   });
 }

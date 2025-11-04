@@ -10,13 +10,17 @@ function createProductCart(products, containerElement) {
     li.classList.add('list__item');
 
     const categoryColor = getCategoryColor(product.category);
+    const imgIndex = (index % 4) + 1;
 
     li.innerHTML = `
-      <a href="#popup" class="popup-link">
+      <a href="#popup" 
+         class="popup-link" 
+         data-product-id="${product.id}" 
+         data-img-index="${imgIndex}">
         <article class="card">
           <div class="card__image">
             <img 
-              src="assets/img/third-best/${(index % 4) + 1}.png" 
+              src="assets/img/third-best/${imgIndex}.png" 
               width="310" 
               height="230" 
               alt="gift" 

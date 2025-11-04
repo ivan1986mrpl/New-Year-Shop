@@ -15,15 +15,12 @@ function renderProductsInTabs(products) {
     return;
   }
 
-  // Очищаем списки перед повторным рендером
   [allList, workList, healthList, harmonyList].forEach((list) => {
     list.innerHTML = '';
   });
 
-  // Рендерим все продукты в первый таб
   createProductCart(products, allList);
 
-  // Фильтруем и рендерим по категориям
   createProductCart(
     products.filter((product) => product.category.toLowerCase() === 'for work'),
     workList,

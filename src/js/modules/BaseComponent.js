@@ -26,9 +26,6 @@ class BaseComponent {
     });
   }
 
-  /**
-   * Перерисовка UI в ответ на обновление состояния
-   */
   updateUI() {
     throw new Error('Необходимо реализовать метод updateUI!');
   }
